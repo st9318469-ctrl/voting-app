@@ -14,10 +14,13 @@
     "bcrypt": "^6.0.0",
     "body-parser": "^2.3.0",
     "cors": "^2.8.6",
+    "dns": "^0.2.2",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "install": "^0.13.0",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.9.1"
+    "mongodb": "^7.5.0",
+    "mongoose": "^9.9.1",
+    "nvm": "^0.0.4"
   }
 }
