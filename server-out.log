@@ -1,9 +1,103 @@
 ◇ injected env (3) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
 listening to the port 3000
 connected to mongodb server
-data saved
-{"id":"6a7359230b8f748124673bf2"}
-token is: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzM1OTIzMGI4Zjc0ODEyNDY3M2JmMiIsImlhdCI6MTc4NTk0NDM1NSwiZXhwIjoxNzg1OTQ3OTU1fQ.KHiivYf94uIYICZ3kPj-X4QEi9mQYCZ--q-9JVD9Vd4
-data saved
-{"id":"6a7359be0b8f748124673bf3"}
-token is: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzM1OWJlMGI4Zjc0ODEyNDY3M2JmMyIsImlhdCI6MTc4NTk0NDUxMSwiZXhwIjoxNzg1OTQ4MTExfQ.yTNKs_UIb6cHRZcxiC1hiKLedkpISIV_nFflCn1OFd4
+mongodb disconnected
+connected to mongodb server
+ValidationError: User validation failed: password: Path `password` is required., aadharCardNumber: Path `aadharCardNumber` is required., name: Path `name` is required.
+    at model.validate (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\document.js:2910:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async model.$__save (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:399:7)
+    at async maybeTracedSave (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:676:7)
+    at async C:\Users\HP\Documents\voting app\VOTING_APP\routes\userRoutes.js:21:22 {
+  errors: {
+    password: ValidatorError: Path `password` is required.
+        at SchemaString.doValidate (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\schemaType.js:1516:13)
+        at model.validate (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\document.js:2888:20)
+        at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        at async model.$__save (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:399:7)
+        at async maybeTracedSave (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:676:7) {
+      properties: [Object],
+      kind: 'required',
+      path: 'password',
+      value: undefined,
+      reason: undefined,
+      Symbol(mongoose#validatorError): true
+    },
+    aadharCardNumber: ValidatorError: Path `aadharCardNumber` is required.
+        at SchemaNumber.doValidate (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\schemaType.js:1516:13)
+        at model.validate (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\document.js:2888:20)
+        at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        at async model.$__save (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:399:7)
+        at async maybeTracedSave (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:676:7) {
+      properties: [Object],
+      kind: 'required',
+      path: 'aadharCardNumber',
+      value: undefined,
+      reason: undefined,
+      Symbol(mongoose#validatorError): true
+    },
+    name: ValidatorError: Path `name` is required.
+        at SchemaString.doValidate (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\schemaType.js:1516:13)
+        at model.validate (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\document.js:2888:20)
+        at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        at async model.$__save (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:399:7)
+        at async maybeTracedSave (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:676:7) {
+      properties: [Object],
+      kind: 'required',
+      path: 'name',
+      value: undefined,
+      reason: undefined,
+      Symbol(mongoose#validatorError): true
+    }
+  },
+  _message: 'User validation failed'
+}
+ValidationError: User validation failed: password: Path `password` is required., aadharCardNumber: Path `aadharCardNumber` is required., name: Path `name` is required.
+    at model.validate (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\document.js:2910:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async model.$__save (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:399:7)
+    at async maybeTracedSave (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:676:7)
+    at async C:\Users\HP\Documents\voting app\VOTING_APP\routes\userRoutes.js:21:22 {
+  errors: {
+    password: ValidatorError: Path `password` is required.
+        at SchemaString.doValidate (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\schemaType.js:1516:13)
+        at model.validate (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\document.js:2888:20)
+        at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        at async model.$__save (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:399:7)
+        at async maybeTracedSave (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:676:7) {
+      properties: [Object],
+      kind: 'required',
+      path: 'password',
+      value: undefined,
+      reason: undefined,
+      Symbol(mongoose#validatorError): true
+    },
+    aadharCardNumber: ValidatorError: Path `aadharCardNumber` is required.
+        at SchemaNumber.doValidate (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\schemaType.js:1516:13)
+        at model.validate (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\document.js:2888:20)
+        at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        at async model.$__save (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:399:7)
+        at async maybeTracedSave (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:676:7) {
+      properties: [Object],
+      kind: 'required',
+      path: 'aadharCardNumber',
+      value: undefined,
+      reason: undefined,
+      Symbol(mongoose#validatorError): true
+    },
+    name: ValidatorError: Path `name` is required.
+        at SchemaString.doValidate (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\schemaType.js:1516:13)
+        at model.validate (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\document.js:2888:20)
+        at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        at async model.$__save (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:399:7)
+        at async maybeTracedSave (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:676:7) {
+      properties: [Object],
+      kind: 'required',
+      path: 'name',
+      value: undefined,
+      reason: undefined,
+      Symbol(mongoose#validatorError): true
+    }
+  },
+  _message: 'User validation failed'
+}

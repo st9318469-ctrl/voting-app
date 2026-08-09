@@ -30,9 +30,16 @@ router.post('/signup', async(req,res)=>{
     console.log("token is:",token);
 
     res.status(200).json({response: response, token: token});
-     }
+}
      catch(err){
       console.log(err);
+
+      if (err.name === 'ValidationError') {
+        return res.status(400).json({ error: 'Validation failed', details: err.message });
+      }
+      if (err.code === 11000) {
+        return res.status(400).json({ error: 'Duplicate value for unique field', details: err.message });
+      }
 
       res.status(500).json({error:'Internal server error'})
      }
@@ -64,12 +71,12 @@ router.post('/login', async(req,res) => {
 
       res.json({token})
 
-   } catch(err){
+} catch(err){
       console.log(err);
       res.status(500).json({error: 'internal server error'})
     
   
-}}); 
+}});
 
 router.put('/profile/password', jwtAuthMiddleware, async(req,res)=>{
   try{

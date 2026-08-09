@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 const PORT = process.env.PORT || 3000;
 
 const userRoutes = require('./routes/userRoutes');
+const candidateRoutes = require('./routes/candidateRoutes');
 
 app.get('/', (req, res) => {
   res.send('Voting app server is running');
@@ -25,6 +26,8 @@ app.get('/health', (req, res) => {
 });
 
 app.use('/user',userRoutes);
+app.use('/candidate',candidateRoutes);
+
 
 
 const server = app.listen(PORT, '127.0.0.1',()=>{

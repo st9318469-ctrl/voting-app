@@ -1,0 +1,14 @@
+◇ injected env (3) from .env // tip: ⌘ override existing { override: true }
+listening to the port 3000
+connected to mongodb server
+data saved
+{"id":"6a78d8556e435c1d6ab101e3"}
+token is: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzhkODU1NmU0MzVjMWQ2YWIxMDFlMyIsImlhdCI6MTc4NjMwNDU5NywiZXhwIjoxNzg2MzA4MTk3fQ.WWisEy1sXOdcB75YtM-c5Urw1I8oOgkvVJa-2hqbBoM
+data saved
+{"id":"6a78d8a76e435c1d6ab101e4"}
+token is: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzhkOGE3NmU0MzVjMWQ2YWIxMDFlNCIsImlhdCI6MTc4NjMwNDY3OSwiZXhwIjoxNzg2MzA4Mjc5fQ.B2vFG5DdPvtF029gbVVkP8ZQ3iSk0yNohv7Xwd-uiS0
+data saved
+{"id":"6a78d9466e435c1d6ab101e5"}
+token is: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNzhkOTQ2NmU0MzVjMWQ2YWIxMDFlNSIsImlhdCI6MTc4NjMwNDgzOCwiZXhwIjoxNzg2MzA4NDM4fQ.MmkCq9C97nIzFkKEh1TGML7amYjFVtOPFI7Mhyljunc
+mongodb disconnected
+connected to mongodb server
