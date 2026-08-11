@@ -13,7 +13,15 @@ dns.setServers(["1.1.1.1","8.8.8.8"]);
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
-app.use(cors({ origin: ['http://localhost:5173', 'http://127.0.0.1:5173', 'http://localhost:3000'] }));
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
+  'http://localhost:3000',
+  'https://voting-app-sachin.vercel.app',
+  process.env.FRONTEND_URL,
+].filter(Boolean);
+
+app.use(cors({ origin: allowedOrigins }));
 const PORT = process.env.PORT || 3000;
 
 const userRoutes = require('./routes/userRoutes');
