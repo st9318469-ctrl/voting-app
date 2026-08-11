@@ -1,0 +1,47 @@
+mongodb connection failed Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+mongodb connection error MongoServerSelectionError: connect EACCES 159.41.192.44:27017
+    at Topology.selectServer (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongodb\lib\sdam\topology.js:348:38)
+    at async Topology._connect (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongodb\lib\sdam\topology.js:220:28)
+    at async Topology.connect (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongodb\lib\sdam\topology.js:171:13)
+    at async topologyConnect (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongodb\lib\mongo_client.js:257:17)
+    at async MongoClient._connect (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongodb\lib\mongo_client.js:270:13)
+    at async MongoClient.connect (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongodb\lib\mongo_client.js:195:13)
+    at async NativeConnection.createClient (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\drivers\node-mongodb-native\connection.js:346:3) {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-z5na3x2-shard-00-00.ec7wzd2.mongodb.net:27017' => [ServerDescription],
+      'ac-z5na3x2-shard-00-01.ec7wzd2.mongodb.net:27017' => [ServerDescription],
+      'ac-z5na3x2-shard-00-02.ec7wzd2.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-nc129u-shard-0',
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [cause]: MongoNetworkError: connect EACCES 159.41.192.44:27017
+      at TLSSocket.<anonymous> (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongodb\lib\cmap\connect.js:314:44)
+      at Object.onceWrapper (node:events:623:26)
+      at TLSSocket.emit (node:events:508:28)
+      at emitErrorNT (node:internal/streams/destroy:170:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    errorLabelSet: Set(3) { 'SystemOverloadedError', 'RetryableError', 'ResetPool' },
+    beforeHandshake: false,
+    [cause]: Error: connect EACCES 159.41.192.44:27017
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1645:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '159.41.192.44',
+      port: 27017
+    }
+  }
+}

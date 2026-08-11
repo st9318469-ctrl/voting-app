@@ -1,0 +1,7 @@
+
+> voting-app@1.0.0 start
+> node server.js
+
+◇ injected env (3) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+listening to the port 3000
+mongodb disconnected

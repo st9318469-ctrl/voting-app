@@ -2,6 +2,6 @@
 > voting-app@1.0.0 start
 > node server.js
 
-◇ injected env (3) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+◇ injected env (3) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
 listening to the port 3000
 connected to mongodb server

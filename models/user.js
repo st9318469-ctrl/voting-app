@@ -11,10 +11,11 @@ const userSchema = new mongoose.Schema({
     type:Number
   },
   email:{
-
     type:String,
-    required:true
-
+    required:true,
+    unique:true,
+    lowercase:true,
+    trim:true
   },
   mobile:{
     type:String,
@@ -44,6 +45,13 @@ const userSchema = new mongoose.Schema({
 
   }
   
+});
+
+userSchema.set('toJSON', {
+  transform: (doc, ret) => {
+    delete ret.password;
+    return ret;
+  },
 });
 
 userSchema.pre('save', async function(){

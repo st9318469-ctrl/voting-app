@@ -1,0 +1,49 @@
+voting application 
+
+what??
+
+a functinality whre user can get vote to the given set of candidates 
+
+
+models 
+
+routes 
+
+
+voting app functinality 
+
+1.user sign in sign up 
+2.see the lsit of candidates 
+3.vote one of the cadidates 
+4.there is a route which shows list of candidates and thier sorted by thier vote count 
+5.user data must contain thier one unique govt id rpoof named: aadhar card number 
+
+6.admin : who list candidates and he can not vote 
+
+routes 
+
+user authentication:
+/signup : post - create a new user account 
+/login - post - log in to an existing account 
+
+voting :
+
+ / candidates: get - get the list of candidates 
+ /vote/:cadidateid: vote for specific cadidate
+
+ user profile:
+
+ /profile: GET - get the user profile 
+
+/ profile/password: put - change the user;s password 
+
+admin cadnidate management 
+
+/candidates : POST - crate a new candidate 
+
+/cadidate/ candiaate : put - udpdate an existing candidate 
+
+/cadidate/candidaateid: delete - delete a cadidare frim the list 
+
+
+draw.io can be sued for making the flow diagram of the project/app 

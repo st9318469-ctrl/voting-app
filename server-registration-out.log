@@ -1,0 +1,37 @@
+
+> voting-app@1.0.0 start
+> node server.js
+
+◇ injected env (3) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+listening to the port 3000
+connected to mongodb server
+mongodb disconnected
+connected to mongodb server
+n is: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2IwODM1MjQzZDExMzFhYjNjYzZkOCIsImlhdCI6MTc4NjQ0NzkyNiwiZXhwIjoxNzg2NzQ3OTI2fQ.sW4NtBcBS4i9GX8NzZ-aj4ek7Fbe1Wm_a9gmKRxHAyw
+MongoServerError: E11000 duplicate key error collection: test.users index: aadharCardNumber_1 dup key: { aadharCardNumber: 123456789123.0 }
+    at InsertOneOperation.handleOk (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at executeOperationWithRetries (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongodb\lib\operations\execute_operation.js:194:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async Collection.insertOne (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongodb\lib\collection.js:154:16)
+    at async model.$__save (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:435:16)
+    at async maybeTracedSave (C:\Users\HP\Documents\voting app\VOTING_APP\node_modules\mongoose\lib\model.js:676:7)
+    at async C:\Users\HP\Documents\voting app\VOTING_APP\routes\userRoutes.js:21:22 {
+  errorLabelSet: Set(0) {},
+  errorResponse: {
+    index: 0,
+    code: 11000,
+    errmsg: 'E11000 duplicate key error collection: test.users index: aadharCardNumber_1 dup key: { aadharCardNumber: 123456789123.0 }',
+    keyPattern: { aadharCardNumber: 1 },
+    keyValue: { aadharCardNumber: 123456789123 }
+  },
+  index: 0,
+  code: 11000,
+  keyPattern: { aadharCardNumber: 1 },
+  keyValue: { aadharCardNumber: 123456789123 }
+}
+data saved
+{"id":"6a7b086d243d1131ab3cc6da"}
+token is: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2IwODZkMjQzZDExMzFhYjNjYzZkYSIsImlhdCI6MTc4NjQ0Nzk4MiwiZXhwIjoxNzg2NzQ3OTgyfQ.v0N7Av-e5dQMzKnCmqyLdy3LQMyStdVgz3lzKri17J0
+mongodb disconnected
+connected to mongodb server

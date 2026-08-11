@@ -1,7 +1,11 @@
 const express = require('express')
 const app = express();
+const path = require('path');
+const fs = require('fs');
 const db = require('./db');
 const dns = require('dns');
+const cors = require('cors');
+
 
 dns.setServers(["1.1.1.1","8.8.8.8"]);
 
@@ -9,12 +13,19 @@ dns.setServers(["1.1.1.1","8.8.8.8"]);
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
+app.use(cors({ origin: ['http://localhost:5173', 'http://127.0.0.1:5173', 'http://localhost:3000'] }));
 const PORT = process.env.PORT || 3000;
 
 const userRoutes = require('./routes/userRoutes');
 const candidateRoutes = require('./routes/candidateRoutes');
+const frontendDistPath = path.join(__dirname, '..', 'frontend', 'dist');
+const frontendIndexPath = path.join(frontendDistPath, 'index.html');
 
 app.get('/', (req, res) => {
+  if (fs.existsSync(frontendIndexPath)) {
+    return res.sendFile(frontendIndexPath);
+  }
+
   res.send('Voting app server is running');
 });
 
@@ -25,8 +36,19 @@ app.get('/health', (req, res) => {
   });
 });
 
-app.use('/user',userRoutes);
-app.use('/candidate',candidateRoutes);
+app.use('/user', userRoutes);
+app.use('/candidate', candidateRoutes);
+app.use('/api/auth', userRoutes);
+app.use('/api/candidates', candidateRoutes);
+
+if (fs.existsSync(frontendDistPath)) {
+  app.use(express.static(frontendDistPath));
+
+  app.get(/^\/(?!api\/|user\/|candidate\/|health$).*/, (req, res) => {
+    res.sendFile(frontendIndexPath);
+  });
+}
+
 
 
 
