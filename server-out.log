@@ -5,3 +5,5 @@
 ◇ injected env (3) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
 listening to the port 3000
 connected to mongodb server
+mongodb disconnected
+connected to mongodb server
