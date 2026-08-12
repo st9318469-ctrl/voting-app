@@ -18,6 +18,7 @@ const allowedOrigins = [
   'http://127.0.0.1:5173',
   'http://localhost:3000',
   'https://voting-app-sachin.vercel.app',
+  'https://voting-app-frontend1.vercel.app',
   process.env.FRONTEND_URL,
 ].filter(Boolean);
 
@@ -26,7 +27,8 @@ app.use(cors({
     if (
       !origin ||
       allowedOrigins.includes(origin) ||
-      /^https:\/\/voting-app-sachin.*\.vercel\.app$/.test(origin)
+      /^https:\/\/voting-app-sachin.*\.vercel\.app$/.test(origin) ||
+      /^https:\/\/voting-app-frontend1.*\.vercel\.app$/.test(origin)
     ) {
       return callback(null, true);
     }
