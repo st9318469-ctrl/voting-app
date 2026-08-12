@@ -58,6 +58,8 @@ app.get('/health', (req, res) => {
 
 app.use('/user', userRoutes);
 app.use('/candidate', candidateRoutes);
+app.use('/auth', userRoutes);
+app.use('/candidates', candidateRoutes);
 app.use('/api/auth', userRoutes);
 app.use('/api/candidates', candidateRoutes);
 
